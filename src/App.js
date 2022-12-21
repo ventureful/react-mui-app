@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import AuthorData from "./Author/MutiForm/AuthorData";
+import PaperData from "./Author/MutiForm/PaperData";
+import MutiForm from "./Author/MutiForm/MutiForm";
+import Dashboard from "./Dashboard";
+import MsgError from "./MsgError";
+import Login from "./Users/Login/Login";
+import Create from "./Create";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Dashboard />
+      {/* <Routes>
+        <Route path="/" element={<Login />} />
+        <Route exact path="/dashboard" element={<Dashboard />} />
+        <Route path="/authdata" element={<AuthorData />} />
+        <Route path="/paperdata" element={<PaperData />} />
+        <Route path="*" element={<MsgError />} />
+      </Routes> */}
     </div>
   );
 }
